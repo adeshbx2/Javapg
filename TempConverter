@@ -1,0 +1,68 @@
+// Temperature Converter Using Java  
+
+import java.util.Scanner;
+public class TempConverter {
+    public static void main(String args[])
+    {
+        System.out.println("||||| Welcome to the Temperature Converter -by Adesh |||||");
+        System.out.println("Please Enter The Value:");
+        Scanner sc=new Scanner(System.in);
+        System.out.println();
+        int val;
+        int example;
+        val=sc.nextInt();
+        do {
+            System.out.println("1 . Celsius to Fahrenheit .");
+            System.out.println("2. Fahrenheit to Celsius .");
+            System.out.println("3. Fahrenheit to Kelvin .");
+            System.out.println("4. Kelvin to Fahrenheit .");
+            System.out.println("5. Kelvin to Celsius");
+            System.out.println("6. Celsius to Kelvin .");
+
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println(val + " Celsius is:");
+                    System.out.println(val * 9 / 5 + 32 + " Fahrenheit");
+                    break;
+
+                case 2:
+                    System.out.println(val + "  Fahrenheit is:");
+                    System.out.println((val - 32) * 5 / 9 + " Celsius");
+                    break;
+
+                case 3:
+                    System.out.println(val + "  Fahrenheit is:");
+                    System.out.println((val - 32) * 5 / 9 + 273.15 + " Kelvin");
+                    break;
+
+                case 4:
+                    System.out.println(val + "  Kelvin is:");
+                    System.out.println((val - 273.15) * 9 / 5 + 32 + " Fahrenheit");
+                    break;
+
+                case 5:
+                    System.out.println(val + "  Kelvin is:");
+                    System.out.println((val - 273.15) + " Celsius");
+                    break;
+
+                case 6:
+                    System.out.println(val + "  Celsius is:");
+                    System.out.println((val + 273.15) + " Kelvin");
+                    break;
+
+                default:
+                    System.out.println("Please Enter Correct Option !!!");
+
+
+
+            }
+            System.out.println();
+            System.out.println(" Do you Want To Continue 1.Yes 2.No");
+            example=sc.nextInt();
+        }
+        while (example==1) ;
+
+
+    }
+}
